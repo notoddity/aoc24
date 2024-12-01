@@ -1,4 +1,10 @@
-### Days Completed:
+### Description
+This repository hosts my solutions to the Advent of Code 2024
+
+### Links
+- [Advent of Code](https://adventofcode.com/)
+
+### Days Completed
 - [x] [Day 1](https://adventofcode.com/2024/day/1)
 - [ ] Day 2
 - [ ] Day 3
