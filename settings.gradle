@@ -1,1 +1,1 @@
-include(":puzzles:01")
+include (":puzzles:01", ":puzzles:01-part2")

@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/puzzles" />
             <option value="$PROJECT_DIR$/puzzles/01" />
+            <option value="$PROJECT_DIR$/puzzles/01-part2" />
           </set>
         </option>
       </GradleProjectSettings>
