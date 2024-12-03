@@ -6,7 +6,7 @@ This repository hosts my solutions to the Advent of Code 2024
 
 ### Days Completed
 - [x] [Day 1](https://adventofcode.com/2024/day/1)
-- [ ] Day 2
+- [X] [Day 2](https://adventofcode.com/2024/day/2)
 - [ ] Day 3
 - [ ] Day 4
 - [ ] Day 5
