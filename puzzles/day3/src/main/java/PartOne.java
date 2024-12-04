@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 
 public class PartOne {
   public static final String EXAMPLE = "xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))";
+  public static final String EXAMPLE_2 = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))";
   public static char[] DIGITS = new char[] {
     '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
   };
@@ -22,12 +23,39 @@ public class PartOne {
     }
 
     //final char[] characters = EXAMPLE.toCharArray();
+    //final char[] characters = EXAMPLE_2.toCharArray();
     final char[] characters = input.toString().toCharArray();
     long sum = 0;
 
+    boolean enabled = true;
+
     outer:
     for (int i = 0; i < characters.length; i++) {
-      if (characters[i] == 'm' &&
+      if (i+3 < characters.length - 1 &&
+          characters[i] == 'd' &&
+          characters[i+1] == 'o' &&
+          characters[i+2] == '(' &&
+          characters[i+3] == ')') {
+        i += 3;
+        enabled = true;
+        continue;
+      }
+
+      if (i+6 < characters.length - 1 &&
+          characters[i] == 'd' &&
+          characters[i+1] == 'o' &&
+          characters[i+2] == 'n' &&
+          characters[i+3] == 39 &&
+          characters[i+4] == 't' &&
+          characters[i+5] == '(' &&
+          characters[i+6] == ')') {
+        i += 6;
+        enabled = false;
+        continue;
+      }
+
+      if (enabled &&
+          characters[i] == 'm' &&
           characters[++i] == 'u' &&
           characters[++i] == 'l' &&
           characters[++i] == '(') {
