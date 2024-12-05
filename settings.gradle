@@ -3,4 +3,5 @@ include (
   ":puzzles:01-part2",
   ":puzzles:day2",
   ":puzzles:day3",
+  ":puzzles:day4",
 )
